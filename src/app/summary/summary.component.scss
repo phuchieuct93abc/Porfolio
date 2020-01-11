@@ -1,3 +1,30 @@
-.summary{
-    background-color: coral;
+.summary {
+    margin-top: 100vh;
+    display: flex;
+
+    .content {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        flex: 1
+    }
+
+    .summary-cards {
+        flex:1;
+        display: grid;
+        grid-template: 50% 1fr / 50% 1fr;
+        grid-gap: 1em;
+        width: 100%;
+        overflow: hidden;
+        .summary-icon{
+            font-size: 200px;
+            margin: 10px auto;
+        }
+    }
+
+    // background-color: coral;
 }

@@ -11,6 +11,9 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { PersonalInformationComponent } from './personal-information/personal-information.component';
 import { SummaryComponent } from './summary/summary.component';
+import { HistoryComponent } from './history/history.component';
+import { SkillComponent } from './skill/skill.component';
+import { PrivateProjectsComponent } from './private-projects/private-projects.component';
 
 registerLocaleData(en);
 
@@ -18,7 +21,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     PersonalInformationComponent,
-    SummaryComponent
+    SummaryComponent,
+    HistoryComponent,
+    SkillComponent,
+    PrivateProjectsComponent
   ],
   imports: [
     BrowserModule,
