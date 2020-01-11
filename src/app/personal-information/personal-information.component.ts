@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-personal-information',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalInformationComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('avatart', { static: true })
+  private avatart: ElementRef;
+  constructor(private element: ElementRef) { }
 
   ngOnInit() {
+  }
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event) {
+    // console.log(event)
+    const elementHtml = <HTMLElement>this.element.nativeElement;
+    console.log(elementHtml.offsetTop);
   }
 
 }

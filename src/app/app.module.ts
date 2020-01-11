@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { PersonalInformationComponent } from './personal-information/personal-information.component';
+import { SummaryComponent } from './summary/summary.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonalInformationComponent
+    PersonalInformationComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
