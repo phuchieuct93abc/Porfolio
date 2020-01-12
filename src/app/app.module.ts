@@ -14,6 +14,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { HistoryComponent } from './history/history.component';
 import { SkillComponent } from './skill/skill.component';
 import { PrivateProjectsComponent } from './private-projects/private-projects.component';
+import { ProjectComponent } from './history/project/project.component';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
     SummaryComponent,
     HistoryComponent,
     SkillComponent,
-    PrivateProjectsComponent
+    PrivateProjectsComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
