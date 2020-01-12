@@ -1,4 +1,23 @@
-nz-card {
-    width: 200px;
-    display: inline-block;
+.wrapper {
+    &.open {
+        // // position: fixed;
+        // z-index: 10;
+        // // top: 0;
+        // // left: 0;
+        // // height: 100vh;
+        // // width: 100vh;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // background-color: rgba($color: #ececec, $alpha: 0.8);
+        // nz-card{
+        //     width: 80vh;
+        // }
+    }
+
+    nz-card {
+        width: 200px;
+        display: inline-block;
+
+    }
 }

@@ -17,8 +17,7 @@ export class PersonalInformationComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event) {
     // console.log(event)
-    const elementHtml = <HTMLElement>this.element.nativeElement;
-    console.log(elementHtml.offsetTop);
+    // const elementHtml = <HTMLElement>this.element.nativeElement;
   }
 
 }
