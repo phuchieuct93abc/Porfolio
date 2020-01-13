@@ -1,1 +1,9 @@
-<p>private-projects works!</p>
+<div class="private-projects section" id="private-projects">
+    <div class="container">
+        <nz-carousel nzAutoPlay>
+            <div nz-carousel-content *ngFor="let projects of privateProjects">
+                <h3>{{ projects.name }}</h3>
+            </div>
+        </nz-carousel>
+    </div>
+</div>
