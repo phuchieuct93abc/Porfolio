@@ -1,8 +1,9 @@
 .history {
-    background-color: #03a9f4;
-    color: white;
-    height: auto;
+    background-image: url('../../assets/background/cover3.jpg');
+    background-size: cover; 
 
-   
+    .content {
+        z-index: 2;
+    }
 
 }

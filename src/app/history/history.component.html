@@ -1,11 +1,14 @@
 <div class="history section">
+    <div class="over"></div>
     <div class="content container">
         <h1>History</h1>
-        <nz-timeline nzMode="alternate">
-            <nz-timeline-item *ngFor="let project of projects">
-                <app-project [project]="project"></app-project>
-            </nz-timeline-item>
 
-        </nz-timeline>
+            <nz-timeline nzMode="alternate">
+                <nz-timeline-item *ngFor="let project of projects">
+                    <app-project [project]="project"></app-project>
+                </nz-timeline-item>
+    
+            </nz-timeline>
+        
     </div>
 </div>

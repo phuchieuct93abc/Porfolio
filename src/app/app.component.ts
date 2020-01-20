@@ -9,6 +9,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
+      // @ts-ignore
       $('.main').onepage_scroll({
         sectionContainer: 'section',     // sectionContainer accepts any kind of selector in case you don't want to use section
         easing: 'ease',                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -26,6 +27,6 @@ export class AppComponent implements AfterViewInit {
         direction: 'vertical'            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
       });
     });
-  
+
   }
 }
