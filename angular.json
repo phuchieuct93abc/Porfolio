@@ -36,7 +36,10 @@
               "src/theme.less",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/libs/onepage-scroll/jquery.onepage-scroll.min.js"
+            ]
           },
           "configurations": {
             "production": {

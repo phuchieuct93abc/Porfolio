@@ -1,10 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~animate.css/animate.min';
+@import 'libs/onepage-scroll/onepage-scroll.scss';
 .section{
-    height: 500px;
-    padding: 1em;
     display: flex;
     align-items: center;
-    z-index: 3;
-    position: relative;
 }
