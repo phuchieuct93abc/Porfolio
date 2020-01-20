@@ -1,8 +1,11 @@
 .summary {
     // display: flex; 
     // height: 110vh;
-    background-image: url('../../assets/background/cover2.jpg');
-    background-size: cover;
+    .cover{
+
+        background-image: url('../../assets/background/cover2.jpg');
+        background-size: cover;
+    }
 
     .content {
         z-index: 2;

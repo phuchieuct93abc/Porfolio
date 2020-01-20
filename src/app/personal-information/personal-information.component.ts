@@ -1,23 +1,19 @@
 import { Component, OnInit, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { SectionComponent } from '../section/section.component';
 
 @Component({
   selector: 'app-personal-information',
   templateUrl: './personal-information.component.html',
+  providers: [{ provide: SectionComponent, useExisting: PersonalInformationComponent }],
   styleUrls: ['./personal-information.component.scss']
 })
-export class PersonalInformationComponent implements OnInit {
+export class PersonalInformationComponent extends SectionComponent implements OnInit {
 
-  @ViewChild('avatart', { static: true })
-  private avatart: ElementRef;
-  constructor(private element: ElementRef) { }
-
-  ngOnInit() {
+  constructor(element: ElementRef) {
+    super(element);
   }
 
-  @HostListener('window:scroll', ['$event']) // for window scroll events
-  onScroll(event) {
-    // console.log(event)
-    // const elementHtml = <HTMLElement>this.element.nativeElement;
+  ngOnInit() {
   }
 
 }

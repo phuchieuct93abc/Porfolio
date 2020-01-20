@@ -1,4 +1,6 @@
-import { Component, OnInit, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, AfterViewInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { SectionComponent } from './section/section.component';
+import { PersonalInformationComponent } from './personal-information/personal-information.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,8 +8,13 @@ import { Component, OnInit, AfterViewChecked, AfterViewInit } from '@angular/cor
 })
 export class AppComponent implements AfterViewInit {
   title = 'porfolio';
+  currentIndex = 0;
+  @ViewChildren(SectionComponent)
+  section: QueryList<SectionComponent>;
 
+  sections: SectionComponent[]
   ngAfterViewInit(): void {
+    this.sections = this.section.toArray();
     setTimeout(() => {
       // @ts-ignore
       $('.main').onepage_scroll({
@@ -17,8 +24,23 @@ export class AppComponent implements AfterViewInit {
         animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
         pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
         updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-        beforeMove: function (index) { },  // This option accepts a callback function. The function will be called before the page moves.
-        afterMove: function (index) { },   // This option accepts a callback function. The function will be called after the page moves.
+        beforeMove: index => {
+          if (index > this.currentIndex) {
+            this.sections[this.currentIndex].leaveUp()
+            this.sections[index - 1].inUp();
+          } else {
+            this.sections[this.currentIndex].leaveDown()
+            this.sections[index - 1].inDown();
+
+          }
+          // this.section[index].start();
+        },  // This option accepts a callback function. The function will be called before the page moves.
+        afterMove: (index) => {
+          this.sections[this.currentIndex].end()
+          this.sections[index - 1].end();
+          this.currentIndex = index - 1
+
+        },   // This option accepts a callback function. The function will be called after the page moves.
         loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         keyboard: true,                  // You can activate the keyboard controls
         responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which

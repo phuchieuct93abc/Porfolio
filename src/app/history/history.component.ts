@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { SectionComponent } from '../section/section.component';
 
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
+  providers: [{ provide: SectionComponent, useExisting: HistoryComponent }],
+
   styleUrls: ['./history.component.scss']
 })
 
-export class HistoryComponent implements OnInit {
+export class HistoryComponent extends SectionComponent implements OnInit {
   readonly projects = [
     {
       name: 'xExpense',
@@ -27,7 +30,7 @@ export class HistoryComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(element: ElementRef) { super(element); }
 
   ngOnInit() {
   }
