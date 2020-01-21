@@ -5,8 +5,21 @@
 // An override for the html selector for theme prefixes
 @html-selector: html;
 
+/*
+@darkPrimaryColor:   #1976D2;
+@primaryColor:       #2196F3;
+@lightPrimaryColor:  #BBDEFB;
+@textPrimaryColor:   #FFFFFF;
+@accentColor:        #FF5722;
+@primaryTextColor:   #212121;
+@secondaryTextColor: #757575;
+@dividerColor:       #BDBDBD;
+*/
+@primaryColor:       #03A9F4;
+
+
 // -------- Colors -----------
-@primary-color: @blue-6;
+@primary-color: @blue-6; //For backgroudn highlight text
 @info-color: @blue-6;
 @success-color: @green-6;
 @processing-color: @blue-6;
@@ -36,9 +49,9 @@
 // ---
 
 // Background color for `<body>`
-@body-background: #fff;
+@body-background: #fafafa;
 // Base background color for most components
-@component-background: #fff;
+@component-background: #fafafa;
 @font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -48,7 +61,7 @@
 @text-color-inverse: @white;
 @icon-color: inherit;
 @icon-color-hover: fade(@black, 75%);
-@heading-color: fade(#000, 85%);
+@heading-color: fade(@primaryColor, 85%);
 @heading-color-dark: fade(@white, 100%);
 @text-color-dark: fade(@white, 85%);
 @text-color-secondary-dark: fade(@white, 65%);

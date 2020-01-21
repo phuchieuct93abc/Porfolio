@@ -2,9 +2,14 @@
     <div class="overlay"></div>
     <div class="cover"></div>
     <div class="content container">
+        <nz-divider [nzText]="header"></nz-divider>
+        <ng-template #header>
+            <h1 nz-title class=" header">Personal Information</h1>
+        </ng-template>
         <div class="avatar" #avatar>
-            <img src="../../assets/avatar.jpg" class="rounded-circle" /> 
+            <img src="../../assets/avatar.jpg" class="rounded-circle" />
         </div>
+
         <div class="information">
             <div class="information-content">
                 <h1 class="name">LÂM PHÚC HIẾU (Mr)</h1>
@@ -12,7 +17,7 @@
                 <h5 class="phone"><i nz-icon nzType="phone" nzTheme="outline"></i>(+84) 83 9911 602</h5>
                 <h5 class="address"><i nz-icon nzType="global" nzTheme="outline"></i>Can Tho city, VietName</h5>
             </div>
-            
+
         </div>
         <div class="scroll-more ">
             <i nz-icon nzType="down" nzTheme="outline"></i>

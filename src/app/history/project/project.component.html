@@ -1,13 +1,19 @@
 <div [ngClass]="{open:isOpen}" class="wrapper">
-    <nz-card nzHoverable [nzTitle]="project.name" (click)="onClick()">
-        {{project.description}}
+    <!-- <nz-card nzHoverable [nzTitle]="project.name" (click)="onClick()"> -->
+   
+    <button nz-button nzType="link">
+        <h5 nz-title>
+            {{project.description}}
+        </h5>
+    </button>
 
-    </nz-card>
-    <div [@openClose]="isOpen ? 'open' : 'closed'">
+
+    <!-- </nz-card> -->
+    <!-- <div [@openClose]="isOpen ? 'open' : 'closed'">
         <ul>
             <li>About {{project.about}}</li>
             <li>Technologies {{project.technologies}}</li>
             <li>Role {{project.role}}</li>
         </ul>
-    </div>
+    </div> -->
 </div>

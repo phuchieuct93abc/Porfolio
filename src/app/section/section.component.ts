@@ -20,7 +20,7 @@ export class SectionComponent implements AfterViewInit {
     this.cover.style.top = '0px';
 
     setTimeout(() => {
-      this.cover.style.top = '200px';
+      this.cover.style.top = '50%';
 
     });
   }
@@ -38,7 +38,7 @@ export class SectionComponent implements AfterViewInit {
     this.cover.style.top = '0px';
 
     setTimeout(() => {
-      this.cover.style.top = '-200px';
+      this.cover.style.top = '-50%';
 
     });
   }

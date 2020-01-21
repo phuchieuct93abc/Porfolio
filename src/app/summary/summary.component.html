@@ -3,33 +3,54 @@
     <div class="cover"></div>
     <div class="content ">
         <div class="container d-flex flex-column h-100">
-            <h1>Summary</h1>
+            <nz-divider [nzText]="header"></nz-divider>
+            <ng-template #header>
+                <h1 nz-title class=" header">Summary</h1>
+
+            </ng-template>
             <div class="summary-cards flex-1">
-                <nz-card nzHoverable [nzCover]="frontend" [nzBordered]="false" >
+                <nz-card nzHoverable [nzCover]="frontend" [nzBordered]="false">
                     <nz-card-meta nzTitle="Frontend" nzDescription="Experienced with frontend technologies: HTML5, CSS3, Javascript, AngularJS (v1),
                     Angular(v2+), React, Vue"></nz-card-meta>
                 </nz-card>
-                <ng-template #frontend>
-                    <i nz-icon nzType="global" nzTheme="outline" class="summary-icon"></i> </ng-template>
-                <nz-card nzHoverable [nzCover]="backend" [nzBordered]="false" >
-                    <nz-card-meta nzTitle="Backend" nzDescription="Experienced with backend technologies: Java, NodeJs, JSF, PrimeFaces"
-                       ></nz-card-meta>
+                <nz-card nzHoverable [nzCover]="backend" [nzBordered]="false">
+                    <nz-card-meta nzTitle="Backend"
+                        nzDescription="Experienced with backend technologies: Java, NodeJs, JSF, PrimeFaces">
+                    </nz-card-meta>
                 </nz-card>
-                <ng-template #backend>
-                    <i nz-icon nzType="database" nzTheme="outline" class="summary-icon"></i> </ng-template>
-                <nz-card nzHoverable [nzCover]="cloud" [nzBordered]="false" >
+                <nz-card nzHoverable [nzCover]="cloud" [nzBordered]="false">
                     <nz-card-meta nzTitle="Cloud services"
-                        nzDescription="Experienced in cloud services / serverless architecture: Google Cloud Platform, Firebase."
-                        ></nz-card-meta>
+                        nzDescription="Experienced in cloud services / serverless architecture: Google Cloud Platform, Firebase.">
+                    </nz-card-meta>
                 </nz-card>
-                <ng-template #cloud>
-                    <i nz-icon nzType="cloud-server" nzTheme="outline" class="summary-icon"></i>
+                <nz-card nzHoverable [nzCover]="cicd" [nzBordered]="false">
+                    <nz-card-meta nzTitle="CI/CD" nzDescription="CI/CD tools: Jenkin, CircleCI"></nz-card-meta>
+                </nz-card>
+                <ng-template #frontend>
+                    <h6>
+
+                        <i nz-icon nzType="global" nzTheme="outline" class="summary-icon"></i>
+                    </h6>
                 </ng-template>
-                <nz-card nzHoverable [nzCover]="cicd" [nzBordered]="false" >
-                    <nz-card-meta nzTitle="CI/CD" nzDescription="CI/CD tools: Jenkin, CircleCI" ></nz-card-meta>
-                </nz-card>
+                <ng-template #backend>
+                    <h6>
+
+                        <i nz-icon nzType="database" nzTheme="outline" class="summary-icon"></i>
+                    </h6>
+                </ng-template>
+                <ng-template #cloud>
+                    <h6>
+
+                        <i nz-icon nzType="cloud-server" nzTheme="outline" class="summary-icon"></i>
+                    </h6>
+                </ng-template>
                 <ng-template #cicd>
-                    <i nz-icon nzType="deployment-unit" nzTheme="outline" class="summary-icon"></i>                </ng-template>>
+
+                    <h6>
+
+                        <i nz-icon nzType="deployment-unit" nzTheme="outline" class="summary-icon"></i>
+                    </h6>
+                </ng-template>>
             </div>
 
 
