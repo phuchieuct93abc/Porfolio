@@ -42,7 +42,7 @@ export class AppComponent implements AfterViewInit {
           this.currentIndex = index - 1
 
         },   // This option accepts a callback function. The function will be called after the page moves.
-        loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+        loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         keyboard: true,                  // You can activate the keyboard controls
         responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
         // you want the responsive fallback to be triggered. For example, set this to 600 and whenever

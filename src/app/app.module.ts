@@ -16,7 +16,8 @@ import { SkillComponent } from './skill/skill.component';
 import { PrivateProjectsComponent } from './private-projects/private-projects.component';
 import { ProjectComponent } from './history/project/project.component';
 import { SectionComponent } from './section/section.component';
-
+import { PrivateProjectComponent } from './private-projects/private-project/private-project.component';
+ 
 registerLocaleData(en);
 
 @NgModule({
@@ -28,7 +29,8 @@ registerLocaleData(en);
     SkillComponent,
     PrivateProjectsComponent,
     ProjectComponent,
-    SectionComponent
+    SectionComponent,
+    PrivateProjectComponent
   ],
   imports: [
     BrowserModule,

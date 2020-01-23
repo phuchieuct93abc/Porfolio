@@ -1,8 +1,11 @@
 <div class="skill section" id="skill">
     <div class="overlay"></div>
     <div class="cover"></div>
-    <div class="container">
-        <h1>Expertise</h1>
+    <div class="container content">
+        <nz-divider [nzText]="header"></nz-divider>
+        <ng-template #header>
+            <h1 nz-title class=" header">Expertise</h1>
+        </ng-template>
         <nz-row [nzGutter]="16">
             <nz-col [nzSpan]="8">
                 <nz-card class="statistic">

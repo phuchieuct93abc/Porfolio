@@ -1,6 +1,13 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { SectionComponent } from '../section/section.component';
 
+export interface PrivateProject {
+  image: string;
+  name: string;
+  title: string;
+  description: string;
+  link: string;
+}
 @Component({
   selector: 'app-private-projects',
   templateUrl: './private-projects.component.html',
@@ -9,38 +16,26 @@ import { SectionComponent } from '../section/section.component';
 })
 export class PrivateProjectsComponent extends SectionComponent implements OnInit {
 
-  readonly privateProjects = [
+  readonly privateProjects: PrivateProject[] = [
     {
-      image: '..',
-      name: 'Báo Hiếu',
+      image: 'blog.png',
+      name: 'Blog',
+      title: 'Frontend development',
+      description: 'The main purpose of this blog is sharing some tips & tricks which are related to the frontend development',
+      link: 'https://news.phuchieu.cf/'
+    }, {
+      image: 'news.png',
+      name: 'Bao Hieu',
       title: 'Reading news application',
       description: 'Allows you to read Vietnamese/English daily news with different categories: hot news, technology, social, sport, video news.',
       link: 'https://news.phuchieu.cf/'
     }, {
-      image: '..',
-      name: 'Báo Hiếu',
+      image: 'highlight.png',
+      name: 'HighLight',
       title: 'Reading news application',
-      description: 'Allows you to read Vietnamese/English daily news with different categories: hot news, technology, social, sport, video news.',
+      description: `HighLight provide an easy way to format and highlight a block of code, which is fully compatible for copy and paste to some different kind of document such as: Microsoft Word, Microsoft Powerpoint, Google Doc, Google slide and Evernote.`,
       link: 'https://news.phuchieu.cf/'
-    }, {
-      image: '..',
-      name: 'Báo Hiếu',
-      title: 'Reading news application',
-      description: 'Allows you to read Vietnamese/English daily news with different categories: hot news, technology, social, sport, video news.',
-      link: 'https://news.phuchieu.cf/'
-    }, {
-      image: '..',
-      name: 'Báo Hiếu',
-      title: 'Reading news application',
-      description: 'Allows you to read Vietnamese/English daily news with different categories: hot news, technology, social, sport, video news.',
-      link: 'https://news.phuchieu.cf/'
-    }, {
-      image: '..',
-      name: 'Báo Hiếu',
-      title: 'Reading news application',
-      description: 'Allows you to read Vietnamese/English daily news with different categories: hot news, technology, social, sport, video news.',
-      link: 'https://news.phuchieu.cf/'
-    },
+    }
   ];
   constructor(element: ElementRef) { super(element); }
 
